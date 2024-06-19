@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Content Fetcher",
+  "version": "1.0",
+  "description": "Fetches and displays textual content of the current website",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_icon": {
+      "16": "icon.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "Click to fetch content"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icon.png"
+  }
+}
